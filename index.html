@@ -1,11 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <title>Calculator</title>
-</head>
-<body>
-    
-</body>
+    <script
+      src="https://kit.fontawesome.com/3d736ff224.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./index.css" />
+
+    <style>
+      @keyframes appear1 {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+      .extra {
+        animation-name: appear1;
+        animation-duration: 200ms;
+        animation-timing-function: ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="display">
+          <input type="text" class="display_input" readonly />
+        </div>
+        <div class="buttons">
+          <button
+            onclick="appendNumber('+')"
+            id="function"
+            class="button"
+            data-value="+"
+          >
+            +
+          </button>
+
+          <button onclick="appendNumber('7')" class="button" data-value="7">
+            7
+          </button>
+          <button onclick="appendNumber('8')" class="button" data-value="8">
+            8
+          </button>
+          <button onclick="appendNumber('9')" class="button" data-value="9">
+            9
+          </button>
+
+          <button
+            onclick="appendNumber('-')"
+            id="function"
+            class="button"
+            data-value="-"
+          >
+            -
+          </button>
+          <button onclick="appendNumber('4')" class="button" data-value="4">
+            4
+          </button>
+          <button onclick="appendNumber('5')" class="button" data-value="5">
+            5
+          </button>
+          <button onclick="appendNumber('6')" class="button" data-value="6">
+            6
+          </button>
+          <button
+            onclick="appendNumber('*')"
+            id="function"
+            class="button"
+            data-value="*"
+          >
+            *
+          </button>
+          <button onclick="appendNumber('1')" class="button" data-value="1">
+            1
+          </button>
+          <button onclick="appendNumber('2')" class="button" data-value="2">
+            2
+          </button>
+          <button onclick="appendNumber('3')" class="button" data-value="3">
+            3
+          </button>
+          <button
+            onclick="appendNumber('/')"
+            id="function"
+            class="button"
+            data-value="/"
+          >
+            /
+          </button>
+          <button onclick="appendNumber('0')" class="button" data-value="0">
+            0
+          </button>
+          <button onclick="appendNumber('.')" class="button" data-value=".">
+            .
+          </button>
+          <button onclick="calculate()" class="button" data-value="=">=</button>
+          <button
+            onclick="clearDisplay()"
+            id="function"
+            class="button"
+            data-value="C"
+          >
+            C
+          </button>
+          <button
+            onclick="toggleExtraButtons()"
+            class="button"
+            data-value="more"
+          >
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <div class="extra">
+          <button onclick="square()" class="button" data-value="">x<sup>2</sup></button>
+          <button onclick="squareRoot()" class="button" data-value="">x<sup>1/2</sup></button>
+          <button onclick="sin()" class="button" data-value="">sin</button>
+          <button onclick="cos()" class="button" data-value="">cos</button>
+          <button onclick="tan()" class="button" data-value="">tan</button>
+          <button onclick="sin1()" class="button" data-value="">sin<sup>-1</sup></button>
+          <button onclick="cos1()" class="button" data-value="">cos<sup>-1</sup></button>
+          <button onclick="tan1()" class="button" data-value="">tan<sup>-1</sup></button>
+        </div> 
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
 </html>

@@ -1,0 +1,67 @@
+:root {
+  --primary-color: hsl(0, 0%, 15%);
+  --secondary-color: hsl(0, 0%, 20%);
+  --function-color: hsl(29, 96%, 55%);
+  --text-color: hsl(0, 0%, 100%);
+  --font-main: "Montserrat";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 420px;
+  margin: 50px auto;
+}
+
+.display .display_input {
+  background-color: var(--secondary-color);
+  padding: 20px 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px 8px 0px 0px;
+  font-family: var(--font-main);
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+.buttons {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.button {
+  padding: 25px 0px;
+  margin: 5px;
+  font-size: 2rem;
+  font-family: var(--font-main);
+  font-weight: 500;
+  width: 22%;
+  border-radius: 50%;
+  color: var(--text-color);
+  background-color: hsl(0, 1%, 24%);
+  border: none;
+  cursor: pointer;
+}
+.button:hover {
+  filter: brightness(0.8);
+}
+#function {
+  background-color: var(--function-color);
+}
+
+.extra {
+  visibility: hidden;
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0px 0px 8px 8px;
+}
